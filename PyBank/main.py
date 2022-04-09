@@ -37,6 +37,15 @@ Greatest_Decrease_Date = df.loc[df['Changes'] == Greatest_Decrease,'Date'].value
 # Set path for results text file
 txt_path = 'analysis/results.txt'
 
+# Print results in terminal
+print ("Financial Analysis\n"+
+        "----------------------------\n" +
+        "Total Months:" + str(Total_Months)+"\n" +
+        "Total: "+ str(Total)+"\n" +
+        "Average Change: $" + str(Average_Changes)+"\n" +
+        "Greatest Increase in Profits: " + str(Greatest_Increase_Date) + " "+ str(Greatest_Increase) +"\n" +
+        "Greatest Decrease in Profits: " + str(Greatest_Decrease_Date) + " "+ str(Greatest_Decrease))
+
 # Write changes to the txt file
 with open (txt_path, 'w') as file:
     file.write ("Financial Analysis\n" +

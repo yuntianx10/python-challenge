@@ -18,6 +18,17 @@ Candidate_Votes = df['Candidate'].value_counts()
 Max = Percent.max()
 Winner = Percent[Percent == Max].index[0]
 
+# Print the results in terminal
+print("Election Results \n" + 
+       "-------------------------\n"+
+       "Total Votes: " + str(Total_Votes) + "\n" + 
+       "-------------------------\n" + 
+       str(Percent.index[0]) + ": " + str(Percent[0]) + "%" + "(" + str(Candidate_Votes[0]) + ")\n" +
+       str(Percent.index[1]) + ": " + str(Percent[1]) + "%" + "(" + str(Candidate_Votes[1]) + ")\n" +
+       str(Percent.index[2]) + ": " + str(Percent[2]) + "%" + "(" + str(Candidate_Votes[2]) + ")\n" +
+       "-------------------------\n" + 
+       "Winner: " + str(Winner))
+
 # Writing results into a txt file
 txt_path = 'analysis/results.txt'
 
